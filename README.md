@@ -49,7 +49,7 @@ This repository is a Home Assistant **custom add-on repository**.
 2. Add: `https://github.com/NielsDimmen/Bestellijst`
 3. Install **Bus 2 Bestellijst** from the store (Supervisor builds from `bestellijst/`; the Dockerfile clones this repo)
 
-See [`bestellijst/README.md`](bestellijst/README.md) for options, port **3000**, and `/data` backup notes.
+See [`bestellijst/README.md`](bestellijst/README.md) for options, host port **8300** (container 3000), and `/data` backup notes.
 
 Offline fallback only: `./scripts/pack-local-addon.sh /addons/bestellijst`
 

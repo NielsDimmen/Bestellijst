@@ -1,6 +1,6 @@
 # Home Assistant add-on: Bus 2 Bestellijst
 
-Next.js Bestellijst-app op poort **3000**. SQLite + gegenereerde `AUTH_SECRET` blijven in `/data`.
+Next.js Bestellijst-app (containerpoort **3000**, standaard hostpoort **8300**). SQLite + gegenereerde `AUTH_SECRET` blijven in `/data`.
 
 ## Installeren via GitHub-repository
 
@@ -10,7 +10,7 @@ Next.js Bestellijst-app op poort **3000**. SQLite + gegenereerde `AUTH_SECRET` b
 4. Sluit dialoog → vernieuw de store indien nodig
 5. Open **Bus 2 Bestellijst** → **Install** (build kloont de app van GitHub; kan enkele minuten duren)
 6. Options (optioneel `admin_password`, `catering_phone`) → **Start**
-7. Open via **Open web UI** of `http://<ha-host>:3000`
+7. Open via **Open web UI** of `http://<ha-host>:8300` (hostpoort wijzigbaar onder Configuration → Network)
 
 ## Opties
 

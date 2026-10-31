@@ -1,5 +1,5 @@
 name: "Bus 2 Bestellijst"
-version: "1.0.0"
+version: "1.0.1"
 slug: bestellijst
 description: "Boodschappen-/bestellijst webapp voor Bus 2 met gebruikersbeheer"
 url: "https://github.com/NielsDimmen/Bestellijst"
@@ -11,9 +11,9 @@ startup: application
 boot: auto
 init: false
 ports:
-  3000/tcp: 3000
+  3000/tcp: 8300
 ports_description:
-  3000/tcp: Webinterface Bestellijst
+  3000/tcp: Webinterface Bestellijst (container 3000 → host 8300; wijzigbaar in add-on UI)
 webui: "http://[HOST]:[PORT:3000]/"
 ingress: false
 panel_icon: mdi:cart-outline

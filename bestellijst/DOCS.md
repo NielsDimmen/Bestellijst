@@ -14,7 +14,7 @@ Bron: [github.com/NielsDimmen/Bestellijst](https://github.com/NielsDimmen/Bestel
 
 ## Poort
 
-De UI draait op poort **3000** (standaard gemapt naar hostpoort 3000). Open via de add-on “Open web UI” of `http://homeassistant.local:3000`.
+De app luistert in de container op poort **3000**. Standaard hostpoort is **8300** (`3000/tcp: 8300`), zodat die niet botst met andere diensten op 3000. De hostpoort kun je wijzigen onder de add-on **Configuration → Network**. Open via “Open web UI” of `http://homeassistant.local:8300`.
 
 ## Persistentie & backup
 
