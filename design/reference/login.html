@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bus 2 · Inloggen (referentie)</title>
+<link rel="stylesheet" href="tokens.css">
+<style>
+  body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--text); font-family: var(--font-body); display: flex; align-items: center; justify-content: center; }
+  main { width: 100%; max-width: 360px; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px; }
+  .pass { align-self: center; width: 180px; background: var(--paper); color: var(--ink); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; }
+  .pass .slot { height: 32px; display: flex; align-items: center; justify-content: center; }
+  .pass .slot span { width: 40px; height: 8px; border-radius: 4px; background: var(--bg); }
+  .pass .band { height: 18px; background: var(--accent); }
+  .pass .word { font-family: var(--font-display); font-weight: 800; font-size: 76px; line-height: .85; letter-spacing: -.02em; padding: 14px 14px 16px; }
+  form { display: flex; flex-direction: column; gap: 16px; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  label { font-size: 15px; font-weight: 500; color: var(--text-dim); }
+  input { height: 52px; box-sizing: border-box; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--surface); padding: 0 14px; font: 18px var(--font-body); color: var(--text); }
+  input:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
+  button { height: 52px; margin-top: 8px; border: 0; border-radius: var(--radius); background: var(--accent); color: var(--ink); font: 600 18px var(--font-body); cursor: pointer; }
+  .error { font-size: 15px; color: var(--danger); margin: 0; }
+</style>
+</head>
+<body>
+<main>
+  <div class="pass" aria-hidden="true">
+    <div class="slot"><span></span></div>
+    <div class="band"></div>
+    <div class="word">BUS 2</div>
+  </div>
+  <form>
+    <div class="field">
+      <label for="user">Gebruikersnaam</label>
+      <input id="user" name="username" autocomplete="username" autocapitalize="none">
+    </div>
+    <div class="field">
+      <label for="pass">Wachtwoord</label>
+      <input id="pass" name="password" type="password" autocomplete="current-password">
+    </div>
+    <!-- Alleen tonen bij fout: -->
+    <p class="error" hidden>Klopt niet</p>
+    <button type="submit">Inloggen</button>
+  </form>
+</main>
+</body>
+</html>

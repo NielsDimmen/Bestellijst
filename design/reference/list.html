@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bus 2 · Lijst (referentie)</title>
+<link rel="stylesheet" href="tokens.css">
+<style>
+  body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--text); font-family: var(--font-body); }
+  .wrap { max-width: 560px; margin: 0 auto; }
+  header { height: 60px; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: var(--bg); }
+  .tag { background: var(--accent); color: var(--ink); font-family: var(--font-display); font-weight: 800; font-size: 26px; line-height: 1; padding: 4px 8px 2px; border-radius: 4px; }
+  .user { font-size: 15px; color: var(--text-muted); background: none; border: 0; cursor: pointer; }
+  form { display: flex; gap: 8px; padding: 16px; }
+  form input { height: 52px; box-sizing: border-box; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--surface); padding: 0 14px; font: 18px var(--font-body); color: var(--text); }
+  form input.name { flex: 1; min-width: 0; }
+  form input.qty-in { width: 56px; min-width: 56px; padding: 0 8px; text-align: center; font-weight: 600; color: var(--accent); }
+  form input:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
+  form button { width: 52px; height: 52px; border: 0; border-radius: var(--radius); background: var(--accent); cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  ul { list-style: none; margin: 0; padding: 0 16px 32px; }
+  li { display: flex; align-items: baseline; gap: 12px; padding: 14px 2px; border-bottom: 1px solid var(--line); }
+  .qty { min-width: 24px; font-size: 18px; font-weight: 600; color: var(--accent); }
+  .name { flex: 1; font-size: 18px; font-weight: 500; }
+  .who { font-size: 14px; color: var(--text-muted); }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="tag">BUS 2</span>
+    <button class="user">Niels</button>
+  </header>
+  <form>
+    <label class="sr" for="qty">Aantal</label>
+    <input id="qty" class="qty-in" type="number" min="1" step="1" placeholder="1" inputmode="numeric" autocomplete="off">
+    <label class="sr" for="item">Item</label>
+    <input id="item" class="name" placeholder="Wat moet er mee?" autocomplete="off">
+    <button type="submit" aria-label="Toevoegen">
+      <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16" stroke="#111" stroke-width="3" stroke-linecap="round" fill="none"/></svg>
+    </button>
+  </form>
+  <ul>
+    <li><span class="qty">2</span><span class="name">Cola Zero 6-pack</span><span class="who">Niels</span></li>
+    <li><span class="qty">1</span><span class="name">Koffiebonen</span><span class="who">Sander</span></li>
+    <li><span class="qty">3</span><span class="name">Bananen</span><span class="who">Lotte</span></li>
+    <li><span class="qty">1</span><span class="name">Stroopwafels</span><span class="who">Niels</span></li>
+    <li><span class="qty">2</span><span class="name">Spa blauw 1,5L</span><span class="who">Mark</span></li>
+    <li><span class="qty">1</span><span class="name">Oordopjes</span><span class="who">Lotte</span></li>
+  </ul>
+</div>
+</body>
+</html>

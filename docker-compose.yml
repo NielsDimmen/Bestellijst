@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: file:/app/data/bestellijst.db
+      AUTH_SECRET: ${AUTH_SECRET}
+      CATERING_PHONE: ${CATERING_PHONE:-}
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped

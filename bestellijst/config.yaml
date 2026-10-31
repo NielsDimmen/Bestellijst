@@ -1,0 +1,27 @@
+name: "Bus 2 Bestellijst"
+version: "1.0.0"
+slug: bestellijst
+description: "Boodschappen-/bestellijst webapp voor Bus 2 met gebruikersbeheer"
+url: "https://github.com/NielsDimmen/Bestellijst"
+arch:
+  - aarch64
+  - amd64
+  - armv7
+startup: application
+boot: auto
+init: false
+ports:
+  3000/tcp: 3000
+ports_description:
+  3000/tcp: Webinterface Bestellijst
+webui: "http://[HOST]:[PORT:3000]/"
+ingress: false
+panel_icon: mdi:cart-outline
+options:
+  auth_secret: ""
+  catering_phone: ""
+  admin_password: ""
+schema:
+  auth_secret: str
+  catering_phone: str?
+  admin_password: password?

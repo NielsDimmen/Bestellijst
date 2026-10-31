@@ -1,0 +1,20 @@
+/* Bus 2 — design tokens. In de app: fonts via @fontsource/barlow-condensed (700, 800) en @fontsource/barlow (400, 500, 600).
+   De import hieronder is alleen zodat de referentie-HTML los te bekijken is. */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;500;600&display=swap');
+:root {
+  --bg: #1B1B1B;          /* app-achtergrond */
+  --surface: #262626;     /* invoervelden */
+  --line: #2E2E2E;        /* scheidingslijnen tussen items */
+  --line-strong: #3A3A3A; /* rand van invoervelden */
+  --text: #F5F4F0;        /* hoofdtekst */
+  --text-dim: #C9C6BE;    /* labels */
+  --text-muted: #8F8C85;  /* wie / secundair */
+  --accent: #F2C200;      /* laminate-geel: knoppen, BUS 2-tag, aantallen */
+  --ink: #111111;         /* tekst op geel en op papier */
+  --paper: #F5F4F0;       /* laminate-kaart */
+  --danger: #FF6B5A;
+
+  --radius: 8px;
+  --font-display: 'Barlow Condensed', system-ui, sans-serif; /* alleen logo / BUS 2-tag */
+  --font-body: 'Barlow', system-ui, sans-serif;
+}
